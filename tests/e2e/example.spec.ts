@@ -8,6 +8,7 @@ test("test", async ({ page }) => {
   const taskName = "Finish Hexlet's course";
   await todoMvcPage.addTodo(taskName);
   await todoMvcPage.addTodo("second todo");
+  await todoMvcPage.addTodo("third todo");
   const item = todoMvcPage.getTaskItemByName(taskName);
   await expect(item).toBeVisible();
 });
